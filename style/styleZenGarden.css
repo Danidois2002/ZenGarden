@@ -1,0 +1,271 @@
+﻿/* =============== Global Styles =============== */
+
+/* Configuration de base pour l'HTML et le body */
+html, body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Police moderne et propre */
+    background: linear-gradient(180deg, #0d2015, #12281c 60%, #0a1a10); /* Dégradé de fond */
+    color: #d9e8c8; /* Couleur du texte */
+    overflow-x: hidden; /* Désactive le débordement horizontal */
+}
+
+/* Défilement fluide pour une meilleure expérience utilisateur */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =============== Page Wrapper =============== */
+
+/* Conteneur principal */
+.page-wrapper {
+    max-width: 1300px; /* Largeur maximale de la page */
+    margin: 50px auto; /* Marges autour pour centrer */
+    padding: 40px;
+    background: rgba(18, 40, 28, 0.9); /* Fond semi-transparent */
+    border-radius: 20px; /* Coins arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Ombre pour effet d'élévation */
+    position: relative;
+    transition: margin 0.3s ease-in-out; /* Transition fluide pour ajuster la page */
+}
+
+/* Ajuste la marge si la sidebar est visible */
+.sidebar:hover ~ .page-wrapper {
+    margin-right: 300px; /* Décale le contenu lorsque la sidebar est ouverte */
+}
+
+/* =============== Header =============== */
+
+/* En-tête de la page */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+    /* Style du titre principal */
+    header h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #b7e396; /* Vert clair */
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5); /* Ombre pour donner de la profondeur */
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    /* Style du sous-titre */
+    header h2 {
+        font-size: 1.8rem;
+        color: #91c883; /* Vert plus doux */
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Légère ombre */
+    }
+
+    /* Élément décoratif avant l'en-tête */
+    header::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle, #b7e396, transparent);
+        border-radius: 50%; /* Cercle décoratif */
+        z-index: -1; /* Derrière le contenu */
+    }
+
+/* =============== Intro Section =============== */
+
+/* Section d'introduction */
+.intro {
+    text-align: center;
+    padding: 30px;
+    background: url('image/img1.png') no-repeat center/cover, linear-gradient(145deg, #1a472d, #12281c); /* Image + dégradé */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Ombre douce */
+    margin-bottom: 40px;
+}
+
+    /* Style du texte de l'introduction */
+    .intro p {
+        font-size: 1.2rem;
+        color: #d9e8c8;
+        line-height: 1.8;
+    }
+
+/* =============== Sections =============== */
+
+/* Style commun pour toutes les sections */
+#zen-supporting div[role="article"] {
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre douce */
+}
+
+/* Style des titres dans les sections */
+#zen-supporting h3 {
+    font-size: 2.2rem;
+    color: #b7e396; /* Vert clair */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Tout en majuscule */
+    letter-spacing: 2px;
+}
+
+/* Style des paragraphes dans les sections */
+#zen-supporting p {
+    line-height: 1.8;
+    margin: 10px 0;
+    color: #d9e8c8;
+    font-size: 1.1rem;
+    text-align: justify; /* Texte justifié */
+}
+
+/* Section d'explication */
+#zen-explanation {
+    background: url('image/img2.png') no-repeat center/cover, linear-gradient(160deg, #1a472d, #12281c);
+}
+
+/* Section de participation */
+#zen-participation {
+    background: url('image/img3.png') no-repeat center/cover, linear-gradient(160deg, #1a472d, #12281c);
+}
+
+/* Section des avantages */
+#zen-benefits {
+    background: url('image/img4.png') no-repeat center/cover, linear-gradient(160deg, #1a472d, #12281c);
+}
+
+/* Section des exigences */
+#zen-requirements {
+    background: url('image/img5.png') no-repeat center/cover, linear-gradient(160deg, #1a472d, #12281c);
+}
+
+/* =============== Footer =============== */
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: linear-gradient(145deg, #1a472d, #12281c);
+    color: #8dbf7a; /* Couleur de texte */
+    border-radius: 10px;
+}
+
+    /* Liens dans le footer */
+    footer a {
+        color: #b7e396;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease; /* Transition pour les interactions */
+    }
+
+        footer a:hover {
+            color: #ffffff; /* Couleur blanche au survol */
+        }
+
+/* =============== Sidebar =============== */
+
+/* Barre latérale */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -325px; /* Partiellement masquée */
+    height: 100%;
+    width: 300px;
+    background: linear-gradient(180deg, #1e4a2f, #12281c);
+    padding: 0 25px;
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    border-left: 2px solid #b7e396; /* Ligne séparatrice */
+    transition: transform 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+
+    /* Indicateur de la sidebar */
+    .sidebar::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 80px;
+        background: #b7e396; /* Couleur de l'indicateur */
+        border-radius: 0 10px 10px 0; /* Coins arrondis */
+        cursor: pointer;
+    }
+
+    /* Sidebar visible au survol */
+    .sidebar:hover {
+        right: 0;
+    }
+
+        /* Modification de l'indicateur au survol */
+        .sidebar:hover::before {
+            background: #91c883;
+        }
+
+    /* Contenu de la sidebar */
+    .sidebar h3 {
+        font-size: 1.8rem;
+        color: #b7e396;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    /* Liste des liens dans la sidebar */
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Style des éléments de liste */
+    .sidebar li {
+        margin-bottom: 15px;
+    }
+
+        /* Style des liens dans la liste */
+        .sidebar li a {
+            color: #b7e396;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            display: block;
+            border: 1px solid #b7e396;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+            .sidebar li a:hover {
+                background: #b7e396;
+                color: #12281c;
+                transform: translateX(10px); /* Décalage au survol */
+            }
+
+/* =============== Boutons =============== */
+
+button {
+    background: #b7e396;
+    color: #12281c;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+    button:hover {
+        background: #91c883;
+    }
+
+/* =============== Animations =============== */
+
+.intro:hover, #zen-supporting div[role="article"]:hover, .sidebar:hover {
+    transform: scale(1.03); /* Agrandissement subtil au survol */
+    transition: transform 0.3s ease;
+}
